@@ -1,8 +1,11 @@
 package navigationwiki;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +24,7 @@ import page.WikiNavigationPage;
 
 public class MythologyStepDefination {
 
-    String driverpath = "C:\\myAssignment\\chromedriver\\chromedriver.exe";
+    String driverpath = System.getProperty("user.dir")+ File.separator +"src/test/resources/driver/chromedriver";
     private WebDriver driver;
     private String baseURL = "https://en.wikipedia.org/wiki/Metis_(mythology)";
     WikiNavigationPage wikiNavigationPage;
@@ -134,8 +137,9 @@ public class MythologyStepDefination {
         nikeWikiNavigationPage.validate_family_tree_header();
     }
 
-    @AfterClass
+    @After
     public void driver_close() {
         driver.close();
+        driver.quit();
     }
 }
