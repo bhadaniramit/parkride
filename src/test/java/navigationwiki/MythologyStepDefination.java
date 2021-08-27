@@ -1,5 +1,9 @@
 package navigationwiki;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -136,6 +140,7 @@ public class MythologyStepDefination {
         // Write code here that turns the phrase above into concrete actions
         nikeWikiNavigationPage.validate_family_tree_header();
     }
+
 
     @After
     public void driver_close() {

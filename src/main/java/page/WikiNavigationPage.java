@@ -17,7 +17,6 @@ import java.util.List;
 
 public class WikiNavigationPage {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WikiNavigationPage.class);
     private static final String Function = "Function";
     private static final String Family = "Family";
     private static final String Mythology = "Mythology";

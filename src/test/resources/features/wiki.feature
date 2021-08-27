@@ -26,4 +26,5 @@ Feature: User navigate to wiki page and perform
 ##Note - Below are the Negative Test Cases I will cover
 #Scenario: Validate that headings on the page with the list mentioned under the content does not matches
 #Scenario: validate links are broken and not navigating to respective headings
-#Scenario: Validate Nike popup
+#Scenario: Validate Nike popup also navigate to next screen
+#Scenario: Fonts of the elements
