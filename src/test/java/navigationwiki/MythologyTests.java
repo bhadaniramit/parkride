@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 "json:target/results/cucumber.json"},
         features = {"src/test/resources/features/wiki.feature"},
         tags = "@auto",
-        glue = {"src/main/java/navigationwiki"}
+        glue = {"navigationwiki"}
 )
 
 public class MythologyTests {

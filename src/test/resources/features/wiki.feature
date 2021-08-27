@@ -1,5 +1,5 @@
 Feature: User navigate to wiki page and perform
-
+  @auto
   Scenario: the headings listed in the `Contents` box are used as headings on the page
     Given User navigates to wiki Page
     Given User navigates to contents table and check of hyperlinks mentioned under table

@@ -1,16 +1,6 @@
-package pages;
+package page;
 
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import static org.junit.Assert.assertTrue;
-
-import java.util.WeakHashMap;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByTagName;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,12 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WikiNavigationPage {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WikiNavigationPage.class);
-    WebDriver driver;
-    JavascriptExecutor javascriptExecutor;
-    WebDriverWait wait;
     private static final String Function = "Function";
     private static final String Family = "Family";
     private static final String Mythology = "Mythology";
@@ -36,45 +26,35 @@ public class WikiNavigationPage {
     private static final String Notes = "Notes";
     private static final String References = "References";
     private static final String FurtherReading = "Further reading";
-
     @FindBy(xpath = "//*[@id=\"toc\"]")
     public WebElement contentBox;
-
     @FindBy(className = "mw-headline")
     public List<WebElement> headerspresentOnPage;
-
     @FindBy(className = "toctitle")
     public WebElement contentHeaderName;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[1]")
     public WebElement hyperLinkFunction;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[2]")
     public WebElement hyperLinkFamily;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[3]")
     public WebElement hyperLinkMythology;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[4]")
     public WebElement hyperLinkInsociology;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[5]")
     public WebElement hyperLinkHonours;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[6]")
     public WebElement hyperLinkNotes;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[7]")
     public WebElement hyperLinkReferences;
-
     @FindBy(xpath = "//*[@id=\"toc\"]/ul/li[8]")
     public WebElement hyperLinkFurtherReading;
-
     @FindBy(xpath = "//*[@id=\"mw-content-text\"]/div[1]/table[3]/tbody/tr[6]/td/div/ul/li[13]/a")
     public WebElement linkNike;
-
     @FindBy(xpath = "//a[@class='mwe-popups-extract']")
     public WebElement hiddenNikePopup;
+    WebDriver driver;
+    JavascriptExecutor javascriptExecutor;
+    WebDriverWait wait;
 
     public WikiNavigationPage(WebDriver driver) {
         this.driver = driver;
