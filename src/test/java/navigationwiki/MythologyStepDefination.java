@@ -30,7 +30,7 @@ public class MythologyStepDefination {
 
     String driverpath = System.getProperty("user.dir")+ File.separator +"src/test/resources/driver/chromedriver";
     private WebDriver driver;
-    private String baseURL = "https://en.wikipedia.org/wiki/Metis_(mythology)/abc";
+    private String baseURL = "https://en.wikipedia.org/wiki/Metis_(mythology)";
     WikiNavigationPage wikiNavigationPage;
     ArrayList hyperlinkUnderContentList;
     ArrayList headersOnPageList;
